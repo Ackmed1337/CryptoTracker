@@ -1,0 +1,57 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="HandheldFriendly" content="true">
+
+<body>
+  <div class="header">
+    <center>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Cryptocurrency_Logo.svg/633px-Cryptocurrency_Logo.svg.png" width=25% height=auto /></center>
+    <h3>CryptoHouse MarketPlace</h3>
+  </div>
+  <div class="adbox">
+    <h3>Advertise Here</h3>
+  </div>
+  <div class="adbox3">
+    <h3>Advertise Here</h3>
+  </div>
+  <div id="paymentnumber">
+    How much would you like to add to your balance:
+    <input v-model.number="number" type="number" step="20">
+    <p>Balance: AUD${{ paymentNumber }}</p>
+  </div>
+  
+  <div class="container" id="app">
+
+    <div v-for="(result, index) in results">
+
+      <div class="item crypto">
+        <p> {{ index }} </p>
+      </div>
+      <div class="item result">
+        <p>$ {{ result.USD }}</p>
+      </div>
+      <div class="item result">
+        <p> A$ {{ result.AUD }}</p>
+      </div>
+      <div id="buyandsell" class="brk-btn">
+      </div>
+      <center>
+      <div class = button v-on:click="buy">Buy</div>
+        <div class = button v-on:click="sell">Sell</div>
+        <div class = button v-on:click="trade">Trade</div>
+        <div class = button v-on:click="loan">Loan</div>
+      </center>
+    </div>
+  </div>
+  <div id="payment">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQcYA2Iip11HpTAHvYq0rlhhb84QB46KN4j90_AaDsTfec1IojW" width="450px" />
+  </div>
+  <font color="red">By Ahmad ElSayed 2019-2020 Project 2 SIT120</font>
+</body>
